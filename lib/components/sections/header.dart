@@ -1,3 +1,4 @@
+import 'package:alubank/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -12,11 +13,7 @@ class Header extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [
-            Color(0xff6763ea),
-            Color(0xf09b69fe),
-            Color(0xf0c36bff),
-          ],
+          colors: ThemeColors.headerGradient,
         ),
       ),
       child: Row(
