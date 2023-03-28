@@ -10,10 +10,9 @@ class BoxCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        borderRadius:  BorderRadius.circular(10),
-        boxShadow: kElevationToShadow[3],
-        
-      ),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: kElevationToShadow[3],
+          color: Theme.of(context).cardColor),
       child: boxContent,
     );
   }
