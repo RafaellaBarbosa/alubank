@@ -22,32 +22,19 @@ class Header extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const <Widget>[
+            children:  <Widget>[
               Text.rich(
                 TextSpan(
                   text: "\$",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: "Raleway"),
                   children: [
                     TextSpan(
                       text: '1000.00',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Raleway"),
+                      style: Theme.of(context).textTheme.bodyLarge
                     )
                   ],
                 ),
               ),
-              Text('Balanço disponível',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold)),
+              const Text('Balanço disponível', style: TextStyle()),
             ],
           ),
           IconButton(
