@@ -1,5 +1,6 @@
-import 'package:alubank/components/sections/box_card.dart';
+import 'package:alubank/components/sections/account_actions.dart';
 import 'package:alubank/components/sections/header.dart';
+import 'package:alubank/components/sections/recent_activity.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -8,13 +9,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: const [
-        Header(),
-        BoxCard(
-          boxContent: Text("Ola mundo"),
-        )
-      ],
+        body: SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: const [Header(), RecentActivity(), AccountActions()],
+      ),
     ));
   }
 }
