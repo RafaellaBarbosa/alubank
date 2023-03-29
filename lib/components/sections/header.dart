@@ -1,3 +1,4 @@
+import 'package:alubank/theme/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -12,11 +13,7 @@ class Header extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [
-            Color(0xff6763ea),
-            Color(0xf09b69fe),
-            Color(0xf0c36bff),
-          ],
+          colors: ThemeColors.headerGradient,
         ),
       ),
       child: Row(
@@ -25,32 +22,19 @@ class Header extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const <Widget>[
+            children:  <Widget>[
               Text.rich(
                 TextSpan(
                   text: "\$",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: "Raleway"),
                   children: [
                     TextSpan(
                       text: '1000.00',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: "Raleway"),
+                      style: Theme.of(context).textTheme.bodyLarge
                     )
                   ],
                 ),
               ),
-              Text('Balanço disponível',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold)),
+              const Text('Balanço disponível', style: TextStyle()),
             ],
           ),
           IconButton(
