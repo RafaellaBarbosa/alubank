@@ -39,7 +39,7 @@ class AccountActions extends StatelessWidget {
             Expanded(
               child: BoxCard(
                 onTap: () {
-                  print("Ler");
+                
                 },
                 boxContent: const _AccountActionsContent(
                   icon: Icons.center_focus_strong,
@@ -58,7 +58,7 @@ class _AccountActionsContent extends StatelessWidget {
   final IconData icon;
   final String text;
   const _AccountActionsContent(
-      {super.key, required this.icon, required this.text});
+      {required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
