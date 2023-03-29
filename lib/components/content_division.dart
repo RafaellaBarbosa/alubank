@@ -7,8 +7,9 @@ class ContentDivision extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Divider(
-      height: 1,
+      height: 16,
       color: ThemeColors.division,
+      thickness: 1,
     );
   }
 }
